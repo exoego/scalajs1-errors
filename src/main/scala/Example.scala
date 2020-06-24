@@ -1,7 +1,7 @@
 import net.exoego.scalajs.types.util.Factory
 import scala.scalajs.js
 
-object Foo {
+object Example {
   def main(args: Array[String]): Unit = {
     val config: ConfigObject = ConfigObject(x = 1)
     println(config.x)
