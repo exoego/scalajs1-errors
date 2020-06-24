@@ -2,5 +2,8 @@ enablePlugins(ScalaJSPlugin)
 scalaVersion := "2.13.2"
 scalaJSUseMainModuleInitializer in Compile := true
 libraryDependencies ++= Seq(
-  "io.lemonlabs" %%% "scala-uri" % "2.2.2",
+  "net.exoego" %%% "scalajs-types-util" % "0.2.1",
+)
+Compile / scalacOptions ++= Seq(
+  "-Ymacro-annotations"
 )

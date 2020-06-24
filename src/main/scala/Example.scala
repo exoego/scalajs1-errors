@@ -1,9 +1,16 @@
-import io.lemonlabs.uri.Url
+import net.exoego.scalajs.types.util.Factory
+import scala.scalajs.js
 
 object Foo {
   def main(args: Array[String]): Unit = {
-    val params = Map.empty[String,String]
-    val queryParams = Url.parse("/").addParams(params.map(v => v._1 -> v._2))
-    println(queryParams)
+    val config: ConfigObject = ConfigObject(x = 1)
+    println(config.x)
+    println(config.y)
   }
+}
+
+@Factory
+trait ConfigObject extends js.Object {
+  var x: Int
+  var y: js.UndefOr[Int]
 }
